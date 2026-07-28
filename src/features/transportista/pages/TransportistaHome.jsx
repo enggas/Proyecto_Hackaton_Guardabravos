@@ -1,4 +1,4 @@
-import React from 'react'
+import { User, Calendar, MapPin, ChevronRight } from 'lucide-react'
 import { usePedidosEntrega } from '../hooks/usePedidosEntrega'
 
 export const TransportistaHome = () => {
