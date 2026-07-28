@@ -1,6 +1,7 @@
 import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import { HowItWorks } from '../components/HowItWorks'
+import { FeaturedProducts } from '../components/FeaturedProducts'
 
 export const LandingPage = () => {
   return (
@@ -8,6 +9,7 @@ export const LandingPage = () => {
       <Navbar />
       <Hero />
       <HowItWorks />
+      <FeaturedProducts />
     </div>
   )
 }
