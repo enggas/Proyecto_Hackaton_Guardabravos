@@ -8,10 +8,11 @@ import { MobileTopBar } from '../components/mobile/MobileTopBar'
 import { MobileHero } from '../components/mobile/MobileHero'
 import { MobileFeaturedProducts } from '../components/mobile/MobileFeaturedProducts'
 import { MobileHowItWorks } from '../components/mobile/MobileHowItWorks'
+import { MobileBottomNav } from '../components/mobile/MobileBottomNav'
 
 export const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-16 md:pb-0">
       <div className="hidden md:block">
         <Navbar />
         <Hero />
@@ -28,6 +29,8 @@ export const LandingPage = () => {
 
       <ProducerCta />
       <Footer />
+
+      <MobileBottomNav />
     </div>
   )
 }
