@@ -1,7 +1,9 @@
+import { Navbar } from '../components/Navbar'
+
 export const LandingPage = () => {
   return (
-    <div>
-      <p>Landing PIXCA en construccion</p>
+    <div className="min-h-screen bg-white">
+      <Navbar />
     </div>
   )
 }
