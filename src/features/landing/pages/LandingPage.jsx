@@ -6,6 +6,7 @@ import { ProducerCta } from '../components/ProducerCta'
 import { Footer } from '../components/Footer'
 import { MobileTopBar } from '../components/mobile/MobileTopBar'
 import { MobileHero } from '../components/mobile/MobileHero'
+import { MobileFeaturedProducts } from '../components/mobile/MobileFeaturedProducts'
 
 export const LandingPage = () => {
   return (
@@ -20,6 +21,7 @@ export const LandingPage = () => {
       <div className="md:hidden">
         <MobileTopBar />
         <MobileHero />
+        <MobileFeaturedProducts />
       </div>
 
       <ProducerCta />
