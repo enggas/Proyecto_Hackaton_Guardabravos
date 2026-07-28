@@ -7,6 +7,7 @@ import { Footer } from '../components/Footer'
 import { MobileTopBar } from '../components/mobile/MobileTopBar'
 import { MobileHero } from '../components/mobile/MobileHero'
 import { MobileFeaturedProducts } from '../components/mobile/MobileFeaturedProducts'
+import { MobileHowItWorks } from '../components/mobile/MobileHowItWorks'
 
 export const LandingPage = () => {
   return (
@@ -22,6 +23,7 @@ export const LandingPage = () => {
         <MobileTopBar />
         <MobileHero />
         <MobileFeaturedProducts />
+        <MobileHowItWorks />
       </div>
 
       <ProducerCta />
