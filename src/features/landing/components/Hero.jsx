@@ -55,8 +55,8 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="relative">
-        <div className="bg-white border border-slate-200 rounded-2xl shadow-lg p-5">
+      <div className="relative mb-6">
+        <div className="bg-white border border-slate-200 rounded-2xl shadow-lg p-5 pb-14">
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm font-semibold text-slate-700">Managua</span>
             <span className="text-sm text-slate-500">42 productos</span>
