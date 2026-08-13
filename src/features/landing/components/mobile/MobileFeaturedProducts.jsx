@@ -3,10 +3,10 @@ import { productosDestacados } from '../../data/productosDestacados'
 
 export const MobileFeaturedProducts = () => {
   return (
-    <section id="productos" className="py-5 border-t border-dashed border-slate-300">
+    <section id="productos" className="py-5 border-t border-dashed border-line">
       <div className="flex items-end justify-between px-4 mb-3">
-        <h2 className="text-lg font-bold text-slate-900">Destacados hoy</h2>
-        <a href="#productos" className="text-sm font-semibold text-slate-700">
+        <h2 className="text-lg font-bold text-ink">Destacados hoy</h2>
+        <a href="#productos" className="text-sm font-semibold text-brand-700">
           Ver todos →
         </a>
       </div>

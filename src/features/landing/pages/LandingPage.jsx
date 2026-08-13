@@ -12,7 +12,7 @@ import { MobileBottomNav } from '../components/mobile/MobileBottomNav'
 
 export const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-white pb-16 md:pb-0">
+    <div className="min-h-screen bg-cream pb-16 md:pb-0">
       <div className="hidden md:block">
         <Navbar />
         <Hero />

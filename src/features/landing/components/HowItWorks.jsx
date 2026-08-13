@@ -23,12 +23,12 @@ const PASOS = [
 
 export const HowItWorks = () => {
   return (
-    <section id="como-funciona" className="border-t border-slate-200 bg-slate-50">
+    <section id="como-funciona" className="border-t border-b border-line bg-mint">
       <div className="max-w-6xl mx-auto px-6 py-16 text-center">
-        <p className="text-xs font-semibold tracking-widest text-slate-500 mb-2">
+        <p className="text-xs font-semibold tracking-widest text-brand-400 mb-2">
           CÓMO FUNCIONA
         </p>
-        <h2 className="text-3xl font-bold text-slate-900 mb-12">
+        <h2 className="text-3xl font-bold text-ink mb-12">
           Tres pasos, sin complicaciones
         </h2>
 
@@ -36,14 +36,14 @@ export const HowItWorks = () => {
           {PASOS.map(({ numero, icono: Icono, titulo, descripcion }) => (
             <div
               key={numero}
-              className="bg-white border border-slate-200 rounded-xl p-8 text-left"
+              className="bg-white border border-line rounded-2xl p-8 text-left"
             >
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-white text-sm font-semibold mb-4">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-brand-500 text-white text-sm font-semibold mb-4">
                 {numero}
               </span>
-              <Icono className="w-6 h-6 text-emerald-700 mb-3" />
-              <h3 className="text-lg font-bold text-slate-900 mb-2">{titulo}</h3>
-              <p className="text-sm text-slate-600">{descripcion}</p>
+              <Icono className="w-6 h-6 text-brand-700 mb-3" />
+              <h3 className="text-lg font-bold text-ink mb-2">{titulo}</h3>
+              <p className="text-sm text-body">{descripcion}</p>
             </div>
           ))}
         </div>

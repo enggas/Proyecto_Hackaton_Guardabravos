@@ -6,10 +6,10 @@ export const FeaturedProducts = () => {
     <section id="productos" className="max-w-6xl mx-auto px-6 py-16">
       <div className="flex items-end justify-between mb-8">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900">Productos destacados</h2>
-          <p className="text-sm text-slate-500">Los más buscados esta semana</p>
+          <h2 className="text-2xl font-bold text-ink">Productos destacados</h2>
+          <p className="text-sm text-muted">Los más buscados esta semana</p>
         </div>
-        <a href="#productos" className="text-sm font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+        <a href="#productos" className="text-sm font-semibold text-brand-700 hover:text-brand-500 transition-colors">
           Ver todo el catálogo →
         </a>
       </div>

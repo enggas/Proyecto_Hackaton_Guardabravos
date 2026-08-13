@@ -14,13 +14,13 @@ const FOOTER_LINKS = [
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-slate-200">
-      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4 text-sm text-slate-500">
+    <footer className="border-t border-line">
+      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4 text-sm text-muted">
         <p>© 2026 pixca · Hecho en Nicaragua 🇳🇮</p>
 
         <div className="flex items-center gap-4">
           {SOCIAL_LINKS.map(({ label, icono: Icono, href }) => (
-            <a key={label} href={href} aria-label={label} className="hover:text-slate-800 transition-colors">
+            <a key={label} href={href} aria-label={label} className="hover:text-ink transition-colors">
               <Icono className="w-4 h-4" />
             </a>
           ))}
@@ -28,7 +28,7 @@ export const Footer = () => {
 
         <div className="flex items-center gap-6">
           {FOOTER_LINKS.map((link) => (
-            <a key={link.label} href={link.href} className="hover:text-slate-800 transition-colors">
+            <a key={link.label} href={link.href} className="hover:text-ink transition-colors">
               {link.label}
             </a>
           ))}
