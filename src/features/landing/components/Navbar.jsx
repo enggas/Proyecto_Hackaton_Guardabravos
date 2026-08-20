@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const NAV_LINKS = [
   { label: 'Explorar', href: '#productos' },
   { label: 'Cómo funciona', href: '#como-funciona' },
@@ -28,9 +30,9 @@ export const Navbar = () => {
         </ul>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="#login" className="text-sm font-semibold text-ink hover:text-brand-700 transition-colors">
+          <Link to="/login" className="text-sm font-semibold text-ink hover:text-brand-700 transition-colors">
             Iniciar sesión
-          </a>
+          </Link>
           <a
             href="#crear-cuenta"
             className="px-4 py-2 bg-brand-500 hover:bg-brand-700 text-white text-sm font-semibold rounded-lg transition-colors"

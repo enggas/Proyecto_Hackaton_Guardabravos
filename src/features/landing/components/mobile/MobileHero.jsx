@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export const MobileHero = () => {
   return (
@@ -23,12 +24,12 @@ export const MobileHero = () => {
         <ArrowRight className="w-4 h-4" />
       </a>
 
-      <a
-        href="#login"
+      <Link
+        to="/login"
         className="block text-center w-full py-3 border border-line text-ink font-semibold rounded-lg mb-4"
       >
         Iniciar sesión
-      </a>
+      </Link>
 
       <p className="text-center text-sm text-body">
         ¿Sos productor?{' '}
