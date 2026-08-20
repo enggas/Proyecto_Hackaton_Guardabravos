@@ -6,10 +6,18 @@ import { AuthField } from '../components/AuthField'
 import { PasswordToggle } from '../components/PasswordToggle'
 import { GoogleIcon, FacebookIcon } from '../components/SocialIcons'
 
+const ROLES = [
+  { value: 'comprador', label: 'Comprador', description: 'Quiero comprar productos frescos' },
+  { value: 'productor', label: 'Productor', description: 'Quiero vender mis cosechas' },
+  { value: 'distribuidor', label: 'Distribuidor', description: 'Quiero hacer entregas' },
+]
+
 export const SignupPage = () => {
   const {
     fullName,
     setFullName,
+    rol,
+    setRol,
     email,
     setEmail,
     password,
@@ -77,6 +85,31 @@ export const SignupPage = () => {
           placeholder="Tu nombre y apellido"
           autoComplete="name"
         />
+
+        <div>
+          <span className="block text-sm font-medium text-ink mb-1.5">¿Cómo querés usar Pixca?</span>
+          <div className="grid grid-cols-3 gap-2">
+            {ROLES.map((option) => (
+              <label
+                key={option.value}
+                className={`flex flex-col items-center text-center gap-1 px-2 py-3 border rounded-lg cursor-pointer transition-colors ${
+                  rol === option.value ? 'border-brand-500 bg-brand-50' : 'border-line hover:bg-mint'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="rol"
+                  value={option.value}
+                  checked={rol === option.value}
+                  onChange={(event) => setRol(event.target.value)}
+                  className="sr-only"
+                />
+                <span className="text-sm font-semibold text-ink">{option.label}</span>
+                <span className="text-xs text-muted">{option.description}</span>
+              </label>
+            ))}
+          </div>
+        </div>
 
         <AuthField
           id="email"

@@ -18,6 +18,7 @@ const traducirError = (message) => {
 export const useSignup = () => {
   const navigate = useNavigate()
   const [fullName, setFullName] = useState('')
+  const [rol, setRol] = useState('comprador')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -38,7 +39,7 @@ export const useSignup = () => {
 
     setLoading(true)
     try {
-      const data = await signUp({ email, password, fullName })
+      const data = await signUp({ email, password, fullName, rol })
       if (data.session) {
         navigate('/')
       } else {
@@ -63,6 +64,8 @@ export const useSignup = () => {
   return {
     fullName,
     setFullName,
+    rol,
+    setRol,
     email,
     setEmail,
     password,

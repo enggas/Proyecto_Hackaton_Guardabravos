@@ -15,17 +15,28 @@ export const signInWithOAuth = async (provider) => {
   return data
 }
 
-export const signUp = async ({ email, password, fullName }) => {
+export const signUp = async ({ email, password, fullName, rol }) => {
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
-      data: { full_name: fullName },
+      data: { nombre_completo: fullName, rol },
       emailRedirectTo: window.location.origin,
     },
   })
   if (error) throw error
   return data
+}
+
+export const getRolUsuario = async (userId) => {
+  const { data, error } = await supabase.from('perfiles').select('rol').eq('id', userId).single()
+  if (error) throw error
+  return data?.rol
+}
+
+export const signOut = async () => {
+  const { error } = await supabase.auth.signOut()
+  if (error) throw error
 }
 
 export const resetPasswordForEmail = async (email) => {
