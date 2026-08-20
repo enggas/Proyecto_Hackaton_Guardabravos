@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { signInWithPassword, signInWithOAuth } from '../services/authService'
+import { signInWithPassword, signInWithOAuth, getRolUsuario } from '../services/authService'
+
+const RUTA_POR_ROL = {
+  comprador: '/tienda',
+  distribuidor: '/transportista',
+}
 
 const traducirError = (message) => {
   if (message?.includes('Invalid login credentials')) {
@@ -26,8 +31,9 @@ export const useLogin = () => {
     setError(null)
     setLoading(true)
     try {
-      await signInWithPassword({ email, password })
-      navigate('/')
+      const { user } = await signInWithPassword({ email, password })
+      const rol = await getRolUsuario(user.id)
+      navigate(RUTA_POR_ROL[rol] || '/')
     } catch (err) {
       setError(traducirError(err.message))
     } finally {
