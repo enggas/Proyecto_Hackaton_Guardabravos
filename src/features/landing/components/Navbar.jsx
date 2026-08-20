@@ -33,12 +33,12 @@ export const Navbar = () => {
           <Link to="/login" className="text-sm font-semibold text-ink hover:text-brand-700 transition-colors">
             Iniciar sesión
           </Link>
-          <a
-            href="#crear-cuenta"
+          <Link
+            to="/registro"
             className="px-4 py-2 bg-brand-500 hover:bg-brand-700 text-white text-sm font-semibold rounded-lg transition-colors"
           >
             Crear cuenta
-          </a>
+          </Link>
         </div>
       </nav>
     </header>

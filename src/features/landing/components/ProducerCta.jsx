@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export const ProducerCta = () => {
   return (
     <section id="productor" className="bg-brand-700">
@@ -7,12 +9,12 @@ export const ProducerCta = () => {
           Publicá tus cosechas y llegá directo a compradores en toda Nicaragua.
           Sin comisiones sobre ventas.
         </p>
-        <a
-          href="#crear-cuenta"
+        <Link
+          to="/registro"
           className="inline-block px-6 py-3 bg-white hover:bg-brand-50 text-brand-700 font-semibold rounded-lg transition-colors"
         >
           Registrate gratis →
-        </a>
+        </Link>
       </div>
     </section>
   )
